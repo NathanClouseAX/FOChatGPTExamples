@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxDataEntityViewExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SystemParametersEntity.FOChatGPTExamples</Name>
+	<DataSources />
+	<FieldGroupExtensions />
+	<FieldGroups />
+	<FieldModifications />
+	<Fields>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>ChatGPTAPIBaseURL</Name>
+			<DataField>ChatGPTAPIBaseURL</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>ChatGPTAPIKey</Name>
+			<DataField>ChatGPTAPIKey</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>ChatGPTAPIModel</Name>
+			<DataField>ChatGPTAPIModel</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+	</Fields>
+	<Mappings />
+	<PropertyModifications />
+	<Relations />
+</AxDataEntityViewExtension>

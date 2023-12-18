@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxFormExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="Microsoft.Dynamics.AX.Metadata.V6">
+	<Name>SysHelpPane.FOChatGPTExamples</Name>
+	<ControlModifications />
+	<Controls>
+		<AxFormExtensionControl xmlns="">
+			<Name>FormExtensionControlvvbfobbv1</Name>
+			<FormControl xmlns=""
+				i:type="AxFormTabPageControl">
+				<Name>ChatGPTAssistant</Name>
+				<Type>TabPage</Type>
+				<FormControlExtension
+					i:nil="true" />
+				<Controls>
+					<AxFormControl xmlns=""
+						i:type="AxFormStaticTextControl">
+						<Name>AssistancePromptText</Name>
+						<Type>StaticText</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Text>Ask for Help</Text>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormStringControl">
+						<Name>AssistancePrompt</Name>
+						<Type>String</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<MultiLine>Yes</MultiLine>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormButtonControl">
+						<Name>AssistanceSubmit</Name>
+						<Type>Button</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<Text>Submit</Text>
+					</AxFormControl>
+					<AxFormControl xmlns=""
+						i:type="AxFormStringControl">
+						<Name>AssistanceResult</Name>
+						<Type>String</Type>
+						<FormControlExtension
+							i:nil="true" />
+						<MultiLine>Yes</MultiLine>
+						<ShowLabel>No</ShowLabel>
+					</AxFormControl>
+					<AxFormControl>
+						<Name>AssistanceResultHTML</Name>
+						<AllowEdit>No</AllowEdit>
+						<FormControlExtension>
+							<Name>HtmlViewerControl</Name>
+							<ExtensionComponents />
+							<ExtensionProperties>
+								<AxFormControlExtensionProperty>
+									<Name>htmlField</Name>
+									<Type>String</Type>
+								</AxFormControlExtensionProperty>
+							</ExtensionProperties>
+						</FormControlExtension>
+					</AxFormControl>
+				</Controls>
+				<Caption>AI Assistant</Caption>
+			</FormControl>
+			<Parent>ContentTab</Parent>
+		</AxFormExtensionControl>
+	</Controls>
+	<DataSourceModifications />
+	<DataSourceReferences />
+	<DataSources />
+	<Parts />
+	<PropertyModifications />
+</AxFormExtension>

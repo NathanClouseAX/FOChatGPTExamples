@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SysHelpPane_Form_EH</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+using ChatGPTWrapper.ChatGPTClient;
+
+internal final class SysHelpPane_Form_EH
+{
+ 
+    
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>AssistanceSubmit_OnClicked</Name>
+				<Source><![CDATA[
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    [FormControlEventHandler(formControlStr(SysHelpPane, AssistanceSubmit), FormControlEventType::Clicked)]
+    public static void AssistanceSubmit_OnClicked(FormControl sender, FormControlEventArgs e)
+    {
+        SystemParameters SystemParameters = SystemParameters::find();
+
+        FormRun formRun = sender.formRun();
+        FormStringControl prompt = formRun.control(formRun.controlId("AssistancePrompt"));
+        FormStringControl result = formRun.control(formRun.controlId("AssistanceResult"));
+      
+        ChatGPTWrapper.ChatGPTClient gtpClient = new ChatGPTWrapper.ChatGPTClient();
+
+        gtpClient.SetApiKey(SystemParameters.ChatGPTAPIKey);
+        gtpClient.SetBaseURL(SystemParameters.ChatGPTAPIBaseURL);
+        gtpClient.SetModel(SystemParameters.ChatGPTAPIModel);
+
+        str gtpResult = gtpClient.SendMessageAsync(prompt.text());
+
+        result.text(gtpResult);
+
+
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>
