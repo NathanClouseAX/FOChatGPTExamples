@@ -6,8 +6,6 @@
     using System.Text;
     using Newtonsoft.Json;
     using System.Collections.Generic;
-using System.Reflection;
-
 
     public class ChatGPTClient
     {
