@@ -42,7 +42,7 @@
 								<WidthMode>SizeToAvailable</WidthMode>
 								<FormControlExtension
 									i:nil="true" />
-								<Text>Paramter for AI Assistant</Text>
+								<Text>Parameters for AI Assistant</Text>
 							</AxFormControl>
 						</Controls>
 						<AllowUserSetup>No</AllowUserSetup>
@@ -180,6 +180,7 @@
 													i:nil="true" />
 												<DataField>ChatGPTAPIPrePrompt</DataField>
 												<DataSource>SystemParameters</DataSource>
+												<MultiLine>Yes</MultiLine>
 											</AxFormControl>
 										</Controls>
 										<Caption>Context</Caption>

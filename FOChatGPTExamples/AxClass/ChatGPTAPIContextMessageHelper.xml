@@ -33,13 +33,13 @@ internal final class ChatGPTAPIContextMessageHelper
         contextList.addEnd(strFmt("Legal Entity is is country %1", DirParty::findPostalAddressByRole(CompanyInfo::current(), LogisticsLocationRoleType::Business).CountryRegionId));
 
         //LE time zone
-        contextList.addEnd(strFmt("Legal entity is in time znoe %1", xDataArea::find(curExt()).timeZone));
+        contextList.addEnd(strFmt("Legal entity is in time zone %1", xDataArea::find(curExt()).timeZone));
 
         //currency of LE
         contextList.addEnd(strFmt("Legal entity currency is %1", Ledger::findByLegalEntity(CompanyInfo::current()).AccountingCurrency));
         
         //users system roles
-        contextList.addEnd(strFmt("User has system roles: %1", ChatGPTAPIContextMessageHelper::getUserRoles()));
+        contextList.addEnd(strFmt("User has system roles %1", ChatGPTAPIContextMessageHelper::getUserRoles()));
 
         listIterator = new ListIterator(contextList);
         while(listIterator.more())
