@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>ChatGPTAPIDefaults</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class ChatGPTAPIDefaults
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>main</Name>
+				<Source><![CDATA[
+    public static void main(Args args)
+    {
+        SystemParameters SystemParameters;
+
+        SystemParameters = args.record();
+
+        SystemParameters.selectForUpdate(true);
+
+        SystemParameters.ChatGPTAPIBaseURL = "https://api.openai.com/v1/chat/completions";
+        SystemParameters.ChatGPTAPIModel = "gpt-3.5-turbo";
+        SystemParameters.ChatGPTAPIPrePrompt = "This is a request for a user of Microsoft Dynamics 365 for Finance and operations that is already signed in. They should be asking for how to perform a task only within that context. If they ask for anything that seems outside the scope of Finance and Operations, please state that you are unable to answer. Coding questions are strictly forbidden. If a question may not be related to Finance and Operations, please tell the user that you are unable to assist until their question is more specific to Finance and Operations. Do your best to provide the most up to date instructions based on the most recently version of Finance and Operations. Do not state the name of the software in the reply. Do not include login steps are part of the response.";
+        SystemParameters.ChatGPTAPIProvideContextInfo = NoYes::Yes;
+
+        SystemParameters.update();
+
+        args.record().dataSource().refresh();
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

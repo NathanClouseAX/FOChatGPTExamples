@@ -33,13 +33,25 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Action Menu Items\" />
     <Folder Include="Classes\" />
     <Folder Include="Data Entity Extensions\" />
+    <Folder Include="EDT Enums\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Form Extensions\" />
     <Folder Include="Table Extensions\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AxClass\ChatGPTAPIContextMessageHelper">
+      <SubType>Content</SubType>
+      <Name>ChatGPTAPIContextMessageHelper</Name>
+      <Link>Classes\ChatGPTAPIContextMessageHelper</Link>
+    </Content>
+    <Content Include="AxClass\ChatGPTAPIDefaults">
+      <SubType>Content</SubType>
+      <Name>ChatGPTAPIDefaults</Name>
+      <Link>Classes\ChatGPTAPIDefaults</Link>
+    </Content>
     <Content Include="AxClass\SysHelpPane_Form_EH">
       <SubType>Content</SubType>
       <Name>SysHelpPane_Form_EH</Name>
@@ -65,6 +77,16 @@
       <Name>ChatGPTAPIModel</Name>
       <Link>EDT Strings\ChatGPTAPIModel</Link>
     </Content>
+    <Content Include="AxEdt\ChatGPTAPIPrePrompt">
+      <SubType>Content</SubType>
+      <Name>ChatGPTAPIPrePrompt</Name>
+      <Link>EDT Strings\ChatGPTAPIPrePrompt</Link>
+    </Content>
+    <Content Include="AxEdt\ChatGPTAPIProvideContextInfo">
+      <SubType>Content</SubType>
+      <Name>ChatGPTAPIProvideContextInfo</Name>
+      <Link>EDT Enums\ChatGPTAPIProvideContextInfo</Link>
+    </Content>
     <Content Include="AxFormExtension\SysHelpPane.FOChatGPTExamples">
       <SubType>Content</SubType>
       <Name>SysHelpPane.FOChatGPTExamples</Name>
@@ -74,6 +96,11 @@
       <SubType>Content</SubType>
       <Name>SystemParameters.FOChatGPTExamples</Name>
       <Link>Form Extensions\SystemParameters.FOChatGPTExamples</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\ChatGPTAPIDefaults">
+      <SubType>Content</SubType>
+      <Name>ChatGPTAPIDefaults</Name>
+      <Link>Action Menu Items\ChatGPTAPIDefaults</Link>
     </Content>
     <Content Include="AxTableExtension\SystemParameters.FOChatGPTExamples">
       <SubType>Content</SubType>

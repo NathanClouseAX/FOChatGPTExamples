@@ -35,6 +35,11 @@ internal final class SysHelpPane_Form_EH
         gtpClient.SetApiKey(SystemParameters.ChatGPTAPIKey);
         gtpClient.SetBaseURL(SystemParameters.ChatGPTAPIBaseURL);
         gtpClient.SetModel(SystemParameters.ChatGPTAPIModel);
+        gtpClient.SetPrePrompt(SystemParameters.ChatGPTAPIPrePrompt);
+        if(SystemParameters.ChatGPTAPIProvideContextInfo)
+        {
+            gtpClient.PrependContext(ChatGPTAPIContextMessageHelper::conextMessage());
+        }
 
         str gtpResult = gtpClient.SendMessageAsync(prompt.text());
 

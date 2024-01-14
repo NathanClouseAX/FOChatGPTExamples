@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>ChatGPTAPIContextMessageHelper</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+internal final class ChatGPTAPIContextMessageHelper
+{
+
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>conextMessage</Name>
+				<Source><![CDATA[
+    public static str conextMessage()
+    {
+        //user time zone, 
+        //country of legal entity currenty in, 
+        //LE time zone
+        //currency of LE
+        //user roles in LE
+
+        List contextList = new List(Types::String);
+        ListIterator listIterator;
+        str ret;
+
+        contextList.addEnd("Addtional Context for the prompt is below.");
+
+        //User Time Zone
+        contextList.addEnd(strFmt("User Time zone is %1", enum2Str(xUserInfo::find(false, curUserId()).preferredTimeZone)));
+      
+        //country of current legal entity
+        contextList.addEnd(strFmt("Legal Entity is is country %1", DirParty::findPostalAddressByRole(CompanyInfo::current(), LogisticsLocationRoleType::Business).CountryRegionId));
+
+        //LE time zone
+        contextList.addEnd(strFmt("Legal entity is in time znoe %1", xDataArea::find(curExt()).timeZone));
+
+        //currency of LE
+        contextList.addEnd(strFmt("Legal entity currency is %1", Ledger::findByLegalEntity(CompanyInfo::current()).AccountingCurrency));
+        
+        //users system roles
+        contextList.addEnd(strFmt("User has system roles: %1", ChatGPTAPIContextMessageHelper::getUserRoles()));
+
+        listIterator = new ListIterator(contextList);
+        while(listIterator.more())
+        {
+            ret += listIterator.value();
+            listIterator.next();
+        }
+        
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>getUserRoles</Name>
+				<Source><![CDATA[
+    public static str getUserRoles()
+    {
+        SecurityRole        role;
+        SecurityUserRole    userRole;
+        UserInfo            userInfo;
+
+        str ret;
+ 
+        while select * from role
+        exists join userRole
+        where role.RecId == userRole.SecurityRole
+        && userRole.User == curUserId()
+        {
+            ret += strFmt("%1, ", role.Name);
+        }
+
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

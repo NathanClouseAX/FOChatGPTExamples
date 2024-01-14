@@ -23,7 +23,9 @@
 					<AxFormControl xmlns=""
 						i:type="AxFormStringControl">
 						<Name>AssistancePrompt</Name>
+						<HeightMode>Auto</HeightMode>
 						<Type>String</Type>
+						<WidthMode>SizeToAvailable</WidthMode>
 						<FormControlExtension
 							i:nil="true" />
 						<MultiLine>Yes</MultiLine>
@@ -32,6 +34,7 @@
 						i:type="AxFormButtonControl">
 						<Name>AssistanceSubmit</Name>
 						<Type>Button</Type>
+						<WidthMode>Auto</WidthMode>
 						<FormControlExtension
 							i:nil="true" />
 						<Text>Submit</Text>
@@ -39,27 +42,16 @@
 					<AxFormControl xmlns=""
 						i:type="AxFormStringControl">
 						<Name>AssistanceResult</Name>
+						<HeightMode>SizeToAvailable</HeightMode>
 						<Type>String</Type>
+						<WidthMode>SizeToAvailable</WidthMode>
 						<FormControlExtension
 							i:nil="true" />
 						<MultiLine>Yes</MultiLine>
 						<ShowLabel>No</ShowLabel>
 					</AxFormControl>
-					<AxFormControl>
-						<Name>AssistanceResultHTML</Name>
-						<AllowEdit>No</AllowEdit>
-						<FormControlExtension>
-							<Name>HtmlViewerControl</Name>
-							<ExtensionComponents />
-							<ExtensionProperties>
-								<AxFormControlExtensionProperty>
-									<Name>htmlField</Name>
-									<Type>String</Type>
-								</AxFormControlExtensionProperty>
-							</ExtensionProperties>
-						</FormControlExtension>
-					</AxFormControl>
 				</Controls>
+				<ArrangeMethod>Auto</ArrangeMethod>
 				<Caption>AI Assistant</Caption>
 			</FormControl>
 			<Parent>ContentTab</Parent>

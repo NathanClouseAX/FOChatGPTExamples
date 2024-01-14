@@ -67,14 +67,14 @@
             var systemRoleMessage = new
             {
                 role = "system",
-                user = _prePrompt
+                content = _prePrompt
 
             };
 
             var userRoleMessage = new
             {
                 role = "user",
-                user = messageWithContext
+                content = messageWithContext
 
             };
 
@@ -85,7 +85,8 @@
             var requestBody = new
             {
                 model = _model,
-                messages = JsonConvert.SerializeObject(messageList)
+                messages = messageList,
+                temperature = .7
             };
 
 
@@ -98,10 +99,14 @@
             if (response.IsSuccessStatusCode)
             {
                 var responseContent = response.Content.ReadAsStringAsync().Result;
-                return responseContent; // Deserialize this JSON response as needed
+
+                ChatGPTResponse ChatGPTResponse =  JsonConvert.DeserializeObject<ChatGPTResponse>(responseContent);
+
+                return ChatGPTResponse.choices[0].message.content;
+  
             }
 
-            throw new HttpRequestException($"Request failed with status code {response.StatusCode}");
+            throw new HttpRequestException($"Request failed with status code {response.StatusCode}. \r \r {json}");
         }
 
         private void EnsureConfiguration()

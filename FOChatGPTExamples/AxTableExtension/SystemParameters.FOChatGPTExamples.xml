@@ -23,6 +23,18 @@
 			<ExtendedDataType>ChatGPTAPIModel</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>ChatGPTAPIPrePrompt</Name>
+			<ExtendedDataType>ChatGPTAPIPrePrompt</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldEnum">
+			<Name>ChatGPTAPIProvideContextInfo</Name>
+			<ExtendedDataType>ChatGPTAPIProvideContextInfo</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
 	</Fields>
 	<FullTextIndexes />
 	<Indexes />
