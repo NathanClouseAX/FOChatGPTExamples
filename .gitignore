@@ -119,3 +119,6 @@
 /bin/Dynamics.AX.FOChatGPTExamples.0.netmodule.xml
 /Projects/ChatGPTExamples/ChatGPTWrapper/obj/Debug
 /Projects/ChatGPTExamples/ChatGPTWrapper/bin/Debug
+/bin/*.pdb
+/bin/*.netmodule
+/Projects/ChatGPTExamples/.vs/*

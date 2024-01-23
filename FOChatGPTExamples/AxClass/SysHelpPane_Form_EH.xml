@@ -4,6 +4,7 @@
 	<SourceCode>
 		<Declaration><![CDATA[
 using ChatGPTWrapper.ChatGPTClient;
+using ChatGPTWrapper.AssistantGPTClient;
 
 internal final class SysHelpPane_Form_EH
 {
@@ -29,21 +30,41 @@ internal final class SysHelpPane_Form_EH
         FormRun formRun = sender.formRun();
         FormStringControl prompt = formRun.control(formRun.controlId("AssistancePrompt"));
         FormStringControl result = formRun.control(formRun.controlId("AssistanceResult"));
-      
-        ChatGPTWrapper.ChatGPTClient gtpClient = new ChatGPTWrapper.ChatGPTClient();
 
-        gtpClient.SetApiKey(SystemParameters.ChatGPTAPIKey);
-        gtpClient.SetBaseURL(SystemParameters.ChatGPTAPIBaseURL);
-        gtpClient.SetModel(SystemParameters.ChatGPTAPIModel);
-        gtpClient.SetPrePrompt(SystemParameters.ChatGPTAPIPrePrompt);
-        if(SystemParameters.ChatGPTAPIProvideContextInfo)
+        if(SystemParameters.ChatGPTAPIUseAPI)
         {
-            gtpClient.PrependContext(ChatGPTAPIContextMessageHelper::conextMessage());
+      
+            ChatGPTWrapper.ChatGPTClient gtpClient = new ChatGPTWrapper.ChatGPTClient();
+
+            gtpClient.SetApiKey(SystemParameters.ChatGPTAPIKey);
+            gtpClient.SetBaseURL(SystemParameters.ChatGPTAPIBaseURL);
+            gtpClient.SetModel(SystemParameters.ChatGPTAPIModel);
+            gtpClient.SetPrePrompt(SystemParameters.ChatGPTAPIPrePrompt);
+            if(SystemParameters.ChatGPTAPIProvideContextInfo)
+            {
+                gtpClient.PrependContext(ChatGPTAPIContextMessageHelper::contextMessageGPT());
+            }
+
+            str gtpResult = gtpClient.SendMessageAsync(prompt.text());
+
+            result.text(gtpResult);
         }
+        else if(SystemParameters.AssistantGPTAPIUseAPI)
+        {
+            ChatGPTWrapper.AssistantGPTClient assistantClient = new ChatGPTWrapper.AssistantGPTClient();
 
-        str gtpResult = gtpClient.SendMessageAsync(prompt.text());
-
-        result.text(gtpResult);
+            assistantClient.SetApiKey(SystemParameters.AssistantGPTAPIKey);
+            assistantClient.SetBaseURL(SystemParameters.AssistantGPTAPIBaseURL);
+            assistantClient.SetAssistantId(SystemParameters.AssistantGPTAPIAssistantId);
+            if(SystemParameters.AssistantGPTAPIPrePrompt != "")
+            {
+                assistantClient.SetPrePrompt(SystemParameters.AssistantGPTAPIPrePrompt);
+            }
+            if(SystemParameters.AssistantGPTAPIProvideContextInfo)
+            {
+                assistantClient.PrependContext(ChatGPTAPIContextMessageHelper::contextMessageAssistantGPT());
+            }
+        }
 
 
     }

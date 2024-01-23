@@ -53,141 +53,315 @@
 						i:type="AxFormGroupControl">
 						<Name>ChatGPTIntegrationContentGroup</Name>
 						<HeightMode>SizeToAvailable</HeightMode>
-						<Pattern>ToolbarFields</Pattern>
-						<PatternVersion>1.1</PatternVersion>
+						<Pattern>Custom</Pattern>
 						<Type>Group</Type>
 						<WidthMode>SizeToAvailable</WidthMode>
 						<FormControlExtension
 							i:nil="true" />
 						<Controls>
 							<AxFormControl xmlns=""
-								i:type="AxFormActionPaneControl">
-								<Name>ChatGPTIntegrationParameter_ActionPane</Name>
-								<Type>ActionPane</Type>
+								i:type="AxFormTabControl">
+								<Name>ChatGPTTabPage</Name>
+								<Type>Tab</Type>
 								<FormControlExtension
 									i:nil="true" />
 								<Controls>
 									<AxFormControl xmlns=""
-										i:type="AxFormButtonGroupControl">
-										<Name>ChatGPTIntegrationParameter_ActionPaneButtons</Name>
-										<Type>ButtonGroup</Type>
-										<FormControlExtension
-											i:nil="true" />
-										<Controls />
-									</AxFormControl>
-									<AxFormControl xmlns=""
-										i:type="AxFormActionPaneTabControl">
-										<Name>ChatGPTIntegrationParameter_ActionPaneTabControl</Name>
-										<Type>ActionPaneTab</Type>
+										i:type="AxFormTabPageControl">
+										<Name>ChatGPTSettings</Name>
+										<Type>TabPage</Type>
+										<WidthMode>SizeToAvailable</WidthMode>
 										<FormControlExtension
 											i:nil="true" />
 										<Controls>
 											<AxFormControl xmlns=""
-												i:type="AxFormButtonGroupControl">
-												<Name>ChatGPTIntegrationParameter_ButtonGroupControl</Name>
-												<Type>ButtonGroup</Type>
+												i:type="AxFormActionPaneControl">
+												<Name>ChatGPTIntegrationParameter_ActionPane</Name>
+												<Type>ActionPane</Type>
 												<FormControlExtension
 													i:nil="true" />
 												<Controls>
 													<AxFormControl xmlns=""
-														i:type="AxFormMenuFunctionButtonControl">
-														<Name>ChatGPTIntegrationParameter_ChatGPTAPIDefaults</Name>
-														<Type>MenuFunctionButton</Type>
+														i:type="AxFormButtonGroupControl">
+														<Name>ChatGPTIntegrationParameter_ActionPaneButtons</Name>
+														<Type>ButtonGroup</Type>
 														<FormControlExtension
 															i:nil="true" />
-														<DataSource>SystemParameters</DataSource>
-														<MenuItemName>ChatGPTAPIDefaults</MenuItemName>
-														<MenuItemType>Action</MenuItemType>
+														<Controls />
+													</AxFormControl>
+													<AxFormControl xmlns=""
+														i:type="AxFormActionPaneTabControl">
+														<Name>ChatGPTIntegrationParameter_ActionPaneTabControl</Name>
+														<Type>ActionPaneTab</Type>
+														<FormControlExtension
+															i:nil="true" />
+														<Controls>
+															<AxFormControl xmlns=""
+																i:type="AxFormButtonGroupControl">
+																<Name>ChatGPTIntegrationParameter_ButtonGroupControl</Name>
+																<Type>ButtonGroup</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<Controls>
+																	<AxFormControl xmlns=""
+																		i:type="AxFormMenuFunctionButtonControl">
+																		<Name>ChatGPTIntegrationParameter_ChatGPTAPIDefaults</Name>
+																		<Type>MenuFunctionButton</Type>
+																		<FormControlExtension
+																			i:nil="true" />
+																		<DataSource>SystemParameters</DataSource>
+																		<MenuItemName>ChatGPTAPIDefaults</MenuItemName>
+																		<MenuItemType>Action</MenuItemType>
+																	</AxFormControl>
+																</Controls>
+															</AxFormControl>
+														</Controls>
 													</AxFormControl>
 												</Controls>
+												<Style>Strip</Style>
+											</AxFormControl>
+											<AxFormControl xmlns=""
+												i:type="AxFormGroupControl">
+												<Name>ChatGPTIntegrationParameter_Fields</Name>
+												<Pattern>FieldsFieldGroups</Pattern>
+												<PatternVersion>1.1</PatternVersion>
+												<Type>Group</Type>
+												<WidthMode>SizeToAvailable</WidthMode>
+												<FormControlExtension
+													i:nil="true" />
+												<Controls>
+													<AxFormControl xmlns=""
+														i:type="AxFormGroupControl">
+														<Name>ChatGPTIntegrationParameter_Setup</Name>
+														<Type>Group</Type>
+														<FormControlExtension
+															i:nil="true" />
+														<Controls>
+															<AxFormControl xmlns=""
+																i:type="AxFormCheckBoxControl">
+																<Name>SystemParameters_ChatGPTAPIUseAPI</Name>
+																<Type>CheckBox</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>ChatGPTAPIUseAPI</DataField>
+																<DataSource>SystemParameters</DataSource>
+															</AxFormControl>
+															<AxFormControl xmlns=""
+																i:type="AxFormStringControl">
+																<Name>SystemParameters_ChatGPTAPIBaseURL</Name>
+																<Type>String</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>ChatGPTAPIBaseURL</DataField>
+																<DataSource>SystemParameters</DataSource>
+																<DisplayLength>300</DisplayLength>
+															</AxFormControl>
+															<AxFormControl xmlns=""
+																i:type="AxFormStringControl">
+																<Name>SystemParameters_ChatGPTAPIKey</Name>
+																<Type>String</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>ChatGPTAPIKey</DataField>
+																<DataSource>SystemParameters</DataSource>
+																<PasswordStyle>Yes</PasswordStyle>
+															</AxFormControl>
+															<AxFormControl xmlns=""
+																i:type="AxFormStringControl">
+																<Name>SystemParameters_ChatGPTAPIModel</Name>
+																<Type>String</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>ChatGPTAPIModel</DataField>
+																<DataSource>SystemParameters</DataSource>
+															</AxFormControl>
+														</Controls>
+														<Caption>Setup</Caption>
+													</AxFormControl>
+													<AxFormControl xmlns=""
+														i:type="AxFormGroupControl">
+														<Name>ChatGPTIntegrationParameter_Context</Name>
+														<Type>Group</Type>
+														<FormControlExtension
+															i:nil="true" />
+														<Controls>
+															<AxFormControl xmlns=""
+																i:type="AxFormCheckBoxControl">
+																<Name>SystemParameters_ChatGPTAPIProvideContextInfo</Name>
+																<Type>CheckBox</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>ChatGPTAPIProvideContextInfo</DataField>
+																<DataSource>SystemParameters</DataSource>
+															</AxFormControl>
+															<AxFormControl xmlns=""
+																i:type="AxFormStringControl">
+																<Name>SystemParameters_ChatGPTAPIPrePrompt</Name>
+																<Type>String</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>ChatGPTAPIPrePrompt</DataField>
+																<DataSource>SystemParameters</DataSource>
+																<MultiLine>Yes</MultiLine>
+															</AxFormControl>
+														</Controls>
+														<Caption>Context</Caption>
+													</AxFormControl>
+												</Controls>
+												<ColumnsMode>Fill</ColumnsMode>
+												<FrameType>None</FrameType>
 											</AxFormControl>
 										</Controls>
+										<Caption>ChatGPT Standard API</Caption>
 									</AxFormControl>
-								</Controls>
-								<Style>Strip</Style>
-							</AxFormControl>
-							<AxFormControl xmlns=""
-								i:type="AxFormGroupControl">
-								<Name>ChatGPTIntegrationParameter_Fields</Name>
-								<HeightMode>SizeToAvailable</HeightMode>
-								<Pattern>FieldsFieldGroups</Pattern>
-								<PatternVersion>1.1</PatternVersion>
-								<Type>Group</Type>
-								<WidthMode>SizeToAvailable</WidthMode>
-								<FormControlExtension
-									i:nil="true" />
-								<Controls>
 									<AxFormControl xmlns=""
-										i:type="AxFormGroupControl">
-										<Name>ChatGPTIntegrationParameter_Setup</Name>
-										<Type>Group</Type>
+										i:type="AxFormTabPageControl">
+										<Name>ChatGPTAssistantAPISettings</Name>
+										<Type>TabPage</Type>
 										<FormControlExtension
 											i:nil="true" />
 										<Controls>
 											<AxFormControl xmlns=""
-												i:type="AxFormStringControl">
-												<Name>SystemParameters_ChatGPTAPIBaseURL</Name>
-												<Type>String</Type>
+												i:type="AxFormActionPaneControl">
+												<Name>ChatGPTAssistantAPIParameter_ActionPane</Name>
+												<Type>ActionPane</Type>
 												<FormControlExtension
 													i:nil="true" />
-												<DataField>ChatGPTAPIBaseURL</DataField>
-												<DataSource>SystemParameters</DataSource>
-												<DisplayLength>300</DisplayLength>
+												<Controls>
+													<AxFormControl xmlns=""
+														i:type="AxFormButtonGroupControl">
+														<Name>ChatGPTAssistantAPIParameter_ActionPaneButtons</Name>
+														<Type>ButtonGroup</Type>
+														<FormControlExtension
+															i:nil="true" />
+														<Controls />
+													</AxFormControl>
+													<AxFormControl xmlns=""
+														i:type="AxFormActionPaneTabControl">
+														<Name>ChatGPTAssistantAPIParameter_ActionPaneTabControl</Name>
+														<Type>ActionPaneTab</Type>
+														<FormControlExtension
+															i:nil="true" />
+														<Controls>
+															<AxFormControl xmlns=""
+																i:type="AxFormButtonGroupControl">
+																<Name>ChatGPTAssistantAPIParameter_ButtonGroupControl</Name>
+																<Type>ButtonGroup</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<Controls>
+																	<AxFormControl xmlns=""
+																		i:type="AxFormMenuFunctionButtonControl">
+																		<Name>ChatGPTAssistantAPIParameter_ChatGPTAssistantAPIDefaults</Name>
+																		<Type>MenuFunctionButton</Type>
+																		<FormControlExtension
+																			i:nil="true" />
+																		<DataSource>SystemParameters</DataSource>
+																		<MenuItemName>ChatGPTAssistantAPIDefaults</MenuItemName>
+																		<MenuItemType>Action</MenuItemType>
+																	</AxFormControl>
+																</Controls>
+															</AxFormControl>
+														</Controls>
+													</AxFormControl>
+												</Controls>
+												<Style>Strip</Style>
 											</AxFormControl>
 											<AxFormControl xmlns=""
-												i:type="AxFormStringControl">
-												<Name>SystemParameters_ChatGPTAPIKey</Name>
-												<Type>String</Type>
+												i:type="AxFormGroupControl">
+												<Name>ChatGPTAssistantAPIParameter_Fields</Name>
+												<Pattern>FieldsFieldGroups</Pattern>
+												<PatternVersion>1.1</PatternVersion>
+												<Type>Group</Type>
+												<WidthMode>SizeToAvailable</WidthMode>
 												<FormControlExtension
 													i:nil="true" />
-												<DataField>ChatGPTAPIKey</DataField>
-												<DataSource>SystemParameters</DataSource>
-												<PasswordStyle>Yes</PasswordStyle>
-											</AxFormControl>
-											<AxFormControl xmlns=""
-												i:type="AxFormStringControl">
-												<Name>SystemParameters_ChatGPTAPIModel</Name>
-												<Type>String</Type>
-												<FormControlExtension
-													i:nil="true" />
-												<DataField>ChatGPTAPIModel</DataField>
-												<DataSource>SystemParameters</DataSource>
+												<Controls>
+													<AxFormControl xmlns=""
+														i:type="AxFormGroupControl">
+														<Name>ChatGPTAssistantAPIParameter_Setup</Name>
+														<Type>Group</Type>
+														<FormControlExtension
+															i:nil="true" />
+														<Controls>
+															<AxFormControl xmlns=""
+																i:type="AxFormCheckBoxControl">
+																<Name>SystemParameters_AssistantGPTAPIUseAPI</Name>
+																<Type>CheckBox</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>AssistantGPTAPIUseAPI</DataField>
+																<DataSource>SystemParameters</DataSource>
+															</AxFormControl>
+															<AxFormControl xmlns=""
+																i:type="AxFormStringControl">
+																<Name>SystemParameters_AssistantGPTAPIBaseURL</Name>
+																<Type>String</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>AssistantGPTAPIBaseURL</DataField>
+																<DataSource>SystemParameters</DataSource>
+															</AxFormControl>
+															<AxFormControl xmlns=""
+																i:type="AxFormStringControl">
+																<Name>SystemParameters_AssistantGPTAPIKey</Name>
+																<Type>String</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>AssistantGPTAPIKey</DataField>
+																<DataSource>SystemParameters</DataSource>
+																<PasswordStyle>Yes</PasswordStyle>
+															</AxFormControl>
+															<AxFormControl xmlns=""
+																i:type="AxFormStringControl">
+																<Name>SystemParameters_AssistantGPTAPIAssistantId</Name>
+																<Type>String</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>AssistantGPTAPIAssistantId</DataField>
+																<DataSource>SystemParameters</DataSource>
+																<PasswordStyle>Yes</PasswordStyle>
+															</AxFormControl>
+														</Controls>
+														<Caption>Setup</Caption>
+													</AxFormControl>
+													<AxFormControl xmlns=""
+														i:type="AxFormGroupControl">
+														<Name>ChatGPTAssistantAPIParameter_Context</Name>
+														<Type>Group</Type>
+														<FormControlExtension
+															i:nil="true" />
+														<Controls>
+															<AxFormControl xmlns=""
+																i:type="AxFormCheckBoxControl">
+																<Name>SystemParameters_AssistantGPTAPIProvideContextInfo</Name>
+																<Type>CheckBox</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>AssistantGPTAPIProvideContextInfo</DataField>
+																<DataSource>SystemParameters</DataSource>
+															</AxFormControl>
+															<AxFormControl xmlns=""
+																i:type="AxFormStringControl">
+																<Name>SystemParameters_AssistantGPTAPIPrePrompt</Name>
+																<Type>String</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>AssistantGPTAPIPrePrompt</DataField>
+																<DataSource>SystemParameters</DataSource>
+															</AxFormControl>
+														</Controls>
+														<Caption>Context</Caption>
+													</AxFormControl>
+												</Controls>
+												<ColumnsMode>Fill</ColumnsMode>
 											</AxFormControl>
 										</Controls>
-										<Caption>Setup</Caption>
-									</AxFormControl>
-									<AxFormControl xmlns=""
-										i:type="AxFormGroupControl">
-										<Name>ChatGPTIntegrationParameter_Context</Name>
-										<Type>Group</Type>
-										<FormControlExtension
-											i:nil="true" />
-										<Controls>
-											<AxFormControl xmlns=""
-												i:type="AxFormCheckBoxControl">
-												<Name>SystemParameters_ChatGPTAPIProvideContextInfo</Name>
-												<Type>CheckBox</Type>
-												<FormControlExtension
-													i:nil="true" />
-												<DataField>ChatGPTAPIProvideContextInfo</DataField>
-												<DataSource>SystemParameters</DataSource>
-											</AxFormControl>
-											<AxFormControl xmlns=""
-												i:type="AxFormStringControl">
-												<Name>SystemParameters_ChatGPTAPIPrePrompt</Name>
-												<Type>String</Type>
-												<FormControlExtension
-													i:nil="true" />
-												<DataField>ChatGPTAPIPrePrompt</DataField>
-												<DataSource>SystemParameters</DataSource>
-												<MultiLine>Yes</MultiLine>
-											</AxFormControl>
-										</Controls>
-										<Caption>Context</Caption>
+										<Caption>ChatGPT Assistant API</Caption>
 									</AxFormControl>
 								</Controls>
-								<ColumnsMode>Fill</ColumnsMode>
-								<FrameType>None</FrameType>
+								<ArrangeMethod>Vertical</ArrangeMethod>
+								<Style>FastTabs</Style>
 							</AxFormControl>
 						</Controls>
 						<FrameType>None</FrameType>

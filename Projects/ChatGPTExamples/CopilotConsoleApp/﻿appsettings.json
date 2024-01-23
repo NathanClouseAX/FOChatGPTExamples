@@ -1,0 +1,9 @@
+{
+  "Settings": {
+    "BotId": "3b06fdfb-e03b-4ae6-959b-a1ebd545e77a",
+    "BotTenantId": "atomicax.com",
+    "BotName": "Test Bot",
+    "BotTokenEndpoint": "https://3e90dfd10e85e95bb1d650133250b7.18.environment.api.powerplatform.com/powervirtualagents/botsbyschema/msdyn_AgentCopilot/directline/token?api-version=2022-03-01-preview",
+    "EndConversationMessage": "quit"
+  }
+}

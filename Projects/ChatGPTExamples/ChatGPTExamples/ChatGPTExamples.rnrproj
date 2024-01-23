@@ -52,15 +52,55 @@
       <Name>ChatGPTAPIDefaults</Name>
       <Link>Classes\ChatGPTAPIDefaults</Link>
     </Content>
+    <Content Include="AxClass\ChatGPTAssistantAPIDefaults">
+      <SubType>Content</SubType>
+      <Name>ChatGPTAssistantAPIDefaults</Name>
+      <Link>Classes\ChatGPTAssistantAPIDefaults</Link>
+    </Content>
     <Content Include="AxClass\SysHelpPane_Form_EH">
       <SubType>Content</SubType>
       <Name>SysHelpPane_Form_EH</Name>
       <Link>Classes\SysHelpPane_Form_EH</Link>
     </Content>
+    <Content Include="AxClass\SystemParameters_FOChatGPTExamples_Extension">
+      <SubType>Content</SubType>
+      <Name>SystemParameters_FOChatGPTExamples_Extension</Name>
+      <Link>Classes\SystemParameters_FOChatGPTExamples_Extension</Link>
+    </Content>
     <Content Include="AxDataEntityViewExtension\SystemParametersEntity.FOChatGPTExamples">
       <SubType>Content</SubType>
       <Name>SystemParametersEntity.FOChatGPTExamples</Name>
       <Link>Data Entity Extensions\SystemParametersEntity.FOChatGPTExamples</Link>
+    </Content>
+    <Content Include="AxEdt\AssistantGPTAPIAssistantId">
+      <SubType>Content</SubType>
+      <Name>AssistantGPTAPIAssistantId</Name>
+      <Link>EDT Strings\AssistantGPTAPIAssistantId</Link>
+    </Content>
+    <Content Include="AxEdt\AssistantGPTAPIBaseURL">
+      <SubType>Content</SubType>
+      <Name>AssistantGPTAPIBaseURL</Name>
+      <Link>EDT Strings\AssistantGPTAPIBaseURL</Link>
+    </Content>
+    <Content Include="AxEdt\AssistantGPTAPIKey">
+      <SubType>Content</SubType>
+      <Name>AssistantGPTAPIKey</Name>
+      <Link>EDT Strings\AssistantGPTAPIKey</Link>
+    </Content>
+    <Content Include="AxEdt\AssistantGPTAPIPrePrompt">
+      <SubType>Content</SubType>
+      <Name>AssistantGPTAPIPrePrompt</Name>
+      <Link>EDT Strings\AssistantGPTAPIPrePrompt</Link>
+    </Content>
+    <Content Include="AxEdt\AssistantGPTAPIProvideContextInfo">
+      <SubType>Content</SubType>
+      <Name>AssistantGPTAPIProvideContextInfo</Name>
+      <Link>EDT Enums\AssistantGPTAPIProvideContextInfo</Link>
+    </Content>
+    <Content Include="AxEdt\AssistantGPTAPIUseAPI">
+      <SubType>Content</SubType>
+      <Name>AssistantGPTAPIUseAPI</Name>
+      <Link>EDT Enums\AssistantGPTAPIUseAPI</Link>
     </Content>
     <Content Include="AxEdt\ChatGPTAPIBaseURL">
       <SubType>Content</SubType>
@@ -87,6 +127,11 @@
       <Name>ChatGPTAPIProvideContextInfo</Name>
       <Link>EDT Enums\ChatGPTAPIProvideContextInfo</Link>
     </Content>
+    <Content Include="AxEdt\ChatGPTAPIUseAPI">
+      <SubType>Content</SubType>
+      <Name>ChatGPTAPIUseAPI</Name>
+      <Link>EDT Enums\ChatGPTAPIUseAPI</Link>
+    </Content>
     <Content Include="AxFormExtension\SysHelpPane.FOChatGPTExamples">
       <SubType>Content</SubType>
       <Name>SysHelpPane.FOChatGPTExamples</Name>
@@ -101,6 +146,11 @@
       <SubType>Content</SubType>
       <Name>ChatGPTAPIDefaults</Name>
       <Link>Action Menu Items\ChatGPTAPIDefaults</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\ChatGPTAssistantAPIDefaults">
+      <SubType>Content</SubType>
+      <Name>ChatGPTAssistantAPIDefaults</Name>
+      <Link>Action Menu Items\ChatGPTAssistantAPIDefaults</Link>
     </Content>
     <Content Include="AxTableExtension\SystemParameters.FOChatGPTExamples">
       <SubType>Content</SubType>
@@ -121,5 +171,5 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
-  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
 </Project>

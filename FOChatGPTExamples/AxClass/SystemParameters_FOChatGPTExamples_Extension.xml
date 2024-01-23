@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AxClass xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<Name>SystemParameters_FOChatGPTExamples_Extension</Name>
+	<SourceCode>
+		<Declaration><![CDATA[
+[ExtensionOf(tableStr(SystemParameters))]
+final class SystemParameters_FOChatGPTExamples_Extension
+{
+}
+]]></Declaration>
+		<Methods>
+			<Method>
+				<Name>validateField</Name>
+				<Source><![CDATA[
+    public boolean validateField(fieldId _fieldIdToCheck)
+    {
+        boolean ret = next validateField(_fieldIdToCheck);
+
+        if(ret)
+        {
+            switch(_fieldIdToCheck)
+            {
+                case fieldNum(SystemParameters, ChatGPTAPIUseAPI):
+                case FieldNum(SystemParameters, AssistantGPTAPIUseAPI):
+
+                    if(this.ChatGPTAPIUseAPI == NoYes::Yes && this.AssistantGPTAPIUseAPI == NoYes::Yes)
+                    {
+                        ret = checkFailed("Only the ChatGPT or Assistant API can be use at once");
+                    }
+
+                    break;
+            }
+        }
+
+        return ret;
+    
+    }
+
+]]></Source>
+			</Method>
+		</Methods>
+	</SourceCode>
+</AxClass>

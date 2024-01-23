@@ -1,0 +1,12 @@
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\bin\Debug\CopilotConsoleApp.exe.config
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\bin\Debug\CopilotConsoleApp.exe
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\bin\Debug\CopilotConsoleApp.pdb
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\bin\Debug\Newtonsoft.Json.dll
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\bin\Debug\Newtonsoft.Json.xml
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\obj\Debug\CopilotConsoleApp.csproj.AssemblyReference.cache
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\obj\Debug\CopilotConsoleApp.csproj.CoreCompileInputs.cache
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\obj\Debug\CopilotConsoleApp.csproj.CopyComplete
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\obj\Debug\CopilotConsoleApp.exe
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\obj\Debug\CopilotConsoleApp.pdb
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\bin\Debug\Microsoft.Bot.Connector.DirectLine.dll
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotConsoleApp\bin\Debug\Microsoft.Rest.ClientRuntime.dll

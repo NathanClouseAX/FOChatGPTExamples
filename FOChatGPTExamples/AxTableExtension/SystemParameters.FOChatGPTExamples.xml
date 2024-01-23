@@ -2,9 +2,63 @@
 <AxTableExtension xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
 	<Name>SystemParameters.FOChatGPTExamples</Name>
 	<FieldGroupExtensions />
-	<FieldGroups />
+	<FieldGroups>
+		<AxTableFieldGroup>
+			<Name>ChatGPT</Name>
+			<Fields>
+				<AxTableFieldGroupField>
+					<DataField>ChatGPTAPIProvideContextInfo</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>ChatGPTAPIUseAPI</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>ChatGPTAPIKey</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>ChatGPTAPIBaseURL</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>ChatGPTAPIModel</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>ChatGPTAPIPrePrompt</DataField>
+				</AxTableFieldGroupField>
+			</Fields>
+		</AxTableFieldGroup>
+		<AxTableFieldGroup>
+			<Name>AssistantGPT</Name>
+			<Fields>
+				<AxTableFieldGroupField>
+					<DataField>AssistantGPTAPIPrePrompt</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>AssistantGPTAPIUseAPI</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>AssistantGPTAPIProvideContextInfo</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>AssistantGPTAPIAssistantId</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>AssistantGPTAPIBaseURL</DataField>
+				</AxTableFieldGroupField>
+				<AxTableFieldGroupField>
+					<DataField>AssistantGPTAPIKey</DataField>
+				</AxTableFieldGroupField>
+			</Fields>
+		</AxTableFieldGroup>
+	</FieldGroups>
 	<FieldModifications />
 	<Fields>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldEnum">
+			<Name>ChatGPTAPIUseAPI</Name>
+			<ExtendedDataType>ChatGPTAPIUseAPI</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<EnumType>NoYes</EnumType>
+		</AxTableField>
 		<AxTableField xmlns=""
 			i:type="AxTableFieldString">
 			<Name>ChatGPTAPIKey</Name>
@@ -33,6 +87,44 @@
 			i:type="AxTableFieldEnum">
 			<Name>ChatGPTAPIProvideContextInfo</Name>
 			<ExtendedDataType>ChatGPTAPIProvideContextInfo</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldEnum">
+			<Name>AssistantGPTAPIUseAPI</Name>
+			<ExtendedDataType>AssistantGPTAPIUseAPI</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<EnumType>NoYes</EnumType>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldEnum">
+			<Name>AssistantGPTAPIProvideContextInfo</Name>
+			<ExtendedDataType>AssistantGPTAPIProvideContextInfo</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<EnumType>NoYes</EnumType>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>AssistantGPTAPIAssistantId</Name>
+			<ExtendedDataType>AssistantGPTAPIAssistantId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>AssistantGPTAPIBaseURL</Name>
+			<ExtendedDataType>AssistantGPTAPIBaseURL</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>AssistantGPTAPIKey</Name>
+			<ExtendedDataType>AssistantGPTAPIKey</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>AssistantGPTAPIPrePrompt</Name>
+			<ExtendedDataType>AssistantGPTAPIPrePrompt</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 		</AxTableField>
 	</Fields>

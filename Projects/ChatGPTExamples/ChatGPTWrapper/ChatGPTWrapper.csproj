@@ -73,9 +73,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssistantGPTClient.cs" />
+    <Compile Include="AssistantGPTRequest.cs" />
+    <Compile Include="AssistantGPTThread.cs" />
+    <Compile Include="AssistantGPTThreadResponse.cs" />
+    <Compile Include="AssistantGPTRunResponse.cs" />
     <Compile Include="ChatGPTClient.cs" />
     <Compile Include="ChatGPTResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="threadMessageListResponse.cs" />
+    <Compile Include="ThreadRunResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

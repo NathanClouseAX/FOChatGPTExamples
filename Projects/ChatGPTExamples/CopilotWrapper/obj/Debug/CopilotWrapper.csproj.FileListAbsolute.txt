@@ -1,0 +1,5 @@
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotWrapper\bin\Debug\CopilotWrapper.dll
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotWrapper\bin\Debug\CopilotWrapper.pdb
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotWrapper\obj\Debug\CopilotWrapper.csproj.CoreCompileInputs.cache
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotWrapper\obj\Debug\CopilotWrapper.dll
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\CopilotWrapper\obj\Debug\CopilotWrapper.pdb

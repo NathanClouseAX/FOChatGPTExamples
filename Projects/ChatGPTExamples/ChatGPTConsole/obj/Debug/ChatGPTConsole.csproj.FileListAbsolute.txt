@@ -1,0 +1,13 @@
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\bin\Debug\ChatGPTConsole.exe.config
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\bin\Debug\ChatGPTConsole.exe
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\bin\Debug\ChatGPTConsole.pdb
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\bin\Debug\ChatGPTWrapper.dll
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\bin\Debug\Newtonsoft.Json.dll
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\bin\Debug\ChatGPTWrapper.pdb
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\bin\Debug\ChatGPTWrapper.dll.config
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\bin\Debug\Newtonsoft.Json.xml
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\obj\Debug\ChatGPTConsole.csproj.AssemblyReference.cache
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\obj\Debug\ChatGPTConsole.csproj.CoreCompileInputs.cache
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\obj\Debug\ChatGPTConsole.csproj.CopyComplete
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\obj\Debug\ChatGPTConsole.exe
+K:\AosService\PackagesLocalDirectory\FOChatGPTExamples\Projects\ChatGPTExamples\ChatGPTConsole\obj\Debug\ChatGPTConsole.pdb

@@ -10,19 +10,62 @@ internal final class ChatGPTAPIContextMessageHelper
 ]]></Declaration>
 		<Methods>
 			<Method>
-				<Name>conextMessage</Name>
+				<Name>contextMessageGPT</Name>
 				<Source><![CDATA[
-    public static str conextMessage()
+    public static str contextMessageGPT()
     {
-        //user time zone, 
-        //country of legal entity currenty in, 
+        List contextList = ChatGPTAPIContextMessageHelper::contextMessageListBase();
+        ListIterator listIterator;
+        str ret;
+
+        listIterator = new ListIterator(contextList);
+        while(listIterator.more())
+        {
+            ret += listIterator.value();
+            listIterator.next();
+        }
+        
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>contextMessageAssistantGPT</Name>
+				<Source><![CDATA[
+    public static str contextMessageAssistantGPT()
+    {
+        List contextList = ChatGPTAPIContextMessageHelper::contextMessageListBase();
+        ListIterator listIterator;
+        str ret;
+
+        contextList.addEnd(strFmt("User is in legal entity %1", curExt()));
+
+        listIterator = new ListIterator(contextList);
+        while(listIterator.more())
+        {
+            ret += listIterator.value();
+            listIterator.next();
+        }
+        
+        return ret;
+    }
+
+]]></Source>
+			</Method>
+			<Method>
+				<Name>contextMessageListBase</Name>
+				<Source><![CDATA[
+    public static List contextMessageListBase()
+    {
+        //user time zone,
+        //country of legal entity currenty in,
         //LE time zone
         //currency of LE
         //user roles in LE
 
         List contextList = new List(Types::String);
         ListIterator listIterator;
-        str ret;
 
         contextList.addEnd("Addtional Context for the prompt is below.");
 
@@ -41,14 +84,7 @@ internal final class ChatGPTAPIContextMessageHelper
         //users system roles
         contextList.addEnd(strFmt("User has system roles %1", ChatGPTAPIContextMessageHelper::getUserRoles()));
 
-        listIterator = new ListIterator(contextList);
-        while(listIterator.more())
-        {
-            ret += listIterator.value();
-            listIterator.next();
-        }
-        
-        return ret;
+        return contextList;
     }
 
 ]]></Source>
