@@ -122,3 +122,4 @@
 /bin/*.pdb
 /bin/*.netmodule
 /Projects/ChatGPTExamples/.vs/*
+/bin/*.delete

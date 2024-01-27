@@ -14,11 +14,17 @@
         {
             AssistantGPTClient client = new AssistantGPTClient();
 
+
             client.SetBaseURL("https://api.openai.com/v1/threads");
             client.SetPrePrompt("");
             client.SetApiKey("");
             client.SetAssistantId("");
 
+            //Console.WriteLine("What time is it?");
+            //Console.WriteLine(client.SendMessageAsync("What time is it?"));
+            //Console.WriteLine("");
+            //Console.WriteLine("What day is it?");
+            //Console.WriteLine(client.SendMessageAsync("What day is it?"));
             Console.WriteLine("");
             Console.WriteLine("How do create a customer?");
             Console.WriteLine(client.SendMessageAsync("How do create a customer?"));

@@ -27,6 +27,7 @@
         private string _apiKey;
         private string _baseURL;
         private string _assistantId;
+        private int _timeOut = 120;
 
         private List<string> context = new List<string>();
 
@@ -70,6 +71,15 @@
         public void PrependContext(string context)
         {
             this.context.Add(context);
+        }
+
+        public void SetTimeOut(int timeOut)
+        {
+            if(timeOut > 1)
+            {
+                _timeOut = timeOut;
+            }
+
         }
 
         public void setMessageWithContext(string message)
@@ -187,11 +197,16 @@
                 System.Threading.Thread.Sleep(1000);
                 getThreadStatus();
 
-                while (AssistantGPTRunResponse.status != "completed" || DateTime.Now > loopStart.AddSeconds(20))
+                while (AssistantGPTRunResponse.status != "completed")
                 {
                     System.Threading.Thread.Sleep(1000);
 
                     getThreadStatus();
+
+                    if(DateTime.Now > loopStart.AddSeconds(_timeOut))
+                    {
+                        throw new TimeoutException();
+                    }
                 }
                 
                 if(AssistantGPTRunResponse != null)

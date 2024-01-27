@@ -11,6 +11,10 @@ internal final class SysHelpPane_Form_EH
  
     
 
+    
+    
+
+
 }
 ]]></Declaration>
 		<Methods>
@@ -31,7 +35,7 @@ internal final class SysHelpPane_Form_EH
         FormStringControl prompt = formRun.control(formRun.controlId("AssistancePrompt"));
         FormStringControl result = formRun.control(formRun.controlId("AssistanceResult"));
 
-        if(SystemParameters.ChatGPTAPIUseAPI)
+        if(SystemParameters.ChatGPTAPIUseAPI == NoYes::Yes)
         {
       
             ChatGPTWrapper.ChatGPTClient gtpClient = new ChatGPTWrapper.ChatGPTClient();
@@ -49,7 +53,7 @@ internal final class SysHelpPane_Form_EH
 
             result.text(gtpResult);
         }
-        else if(SystemParameters.AssistantGPTAPIUseAPI)
+        else if(SystemParameters.AssistantGPTAPIUseAPI == NoYes::Yes)
         {
             ChatGPTWrapper.AssistantGPTClient assistantClient = new ChatGPTWrapper.AssistantGPTClient();
 
@@ -64,9 +68,39 @@ internal final class SysHelpPane_Form_EH
             {
                 assistantClient.PrependContext(ChatGPTAPIContextMessageHelper::contextMessageAssistantGPT());
             }
+
+            str assistantResult = assistantClient.SendMessageAsync(prompt.text());
+
+            result.text(assistantResult);
         }
+    }
 
+]]></Source>
+			</Method>
+			<Method>
+				<Name>SysHelpPane_OnInitialized</Name>
+				<Source><![CDATA[
+    /// <summary>
+    /// enable Tab for AI help when any AI help system is enabled
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    [FormEventHandler(formStr(SysHelpPane), FormEventType::Initialized)]
+    public static void SysHelpPane_OnInitialized(xFormRun sender, FormEventArgs e)
+    {
+        SystemParameters SystemParameters = SystemParameters::find();
 
+        //FormRun formRun = sender.form()
+        
+        FormTabPageControl ChatGPTAssistant = sender.control(sender.controlId("ChatGPTAssistant"));
+
+        if(SystemParameters.ChatGPTAPIUseAPI || SystemParameters.AssistantGPTAPIUseAPI)
+        {
+            if(ChatGPTAssistant)
+            {
+                ChatGPTAssistant.visible(true);
+            }
+        }
     }
 
 ]]></Source>

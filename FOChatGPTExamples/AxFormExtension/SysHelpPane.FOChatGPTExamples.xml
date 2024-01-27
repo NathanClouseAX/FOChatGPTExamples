@@ -9,6 +9,7 @@
 				i:type="AxFormTabPageControl">
 				<Name>ChatGPTAssistant</Name>
 				<Type>TabPage</Type>
+				<Visible>No</Visible>
 				<FormControlExtension
 					i:nil="true" />
 				<Controls>
