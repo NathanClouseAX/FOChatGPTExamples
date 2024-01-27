@@ -37,6 +37,7 @@
     <Folder Include="Classes\" />
     <Folder Include="Data Entity Extensions\" />
     <Folder Include="EDT Enums\" />
+    <Folder Include="EDT Integers\" />
     <Folder Include="EDT Strings\" />
     <Folder Include="Form Extensions\" />
     <Folder Include="Table Extensions\" />
@@ -96,6 +97,11 @@
       <SubType>Content</SubType>
       <Name>AssistantGPTAPIProvideContextInfo</Name>
       <Link>EDT Enums\AssistantGPTAPIProvideContextInfo</Link>
+    </Content>
+    <Content Include="AxEdt\AssistantGPTAPITimeOut">
+      <SubType>Content</SubType>
+      <Name>AssistantGPTAPITimeOut</Name>
+      <Link>EDT Integers\AssistantGPTAPITimeOut</Link>
     </Content>
     <Content Include="AxEdt\AssistantGPTAPIUseAPI">
       <SubType>Content</SubType>

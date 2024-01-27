@@ -322,6 +322,15 @@
 																<DataSource>SystemParameters</DataSource>
 																<PasswordStyle>Yes</PasswordStyle>
 															</AxFormControl>
+															<AxFormControl xmlns=""
+																i:type="AxFormIntegerControl">
+																<Name>SystemParameters_AssistantGPTAPITimeOut</Name>
+																<Type>Integer</Type>
+																<FormControlExtension
+																	i:nil="true" />
+																<DataField>AssistantGPTAPITimeOut</DataField>
+																<DataSource>SystemParameters</DataSource>
+															</AxFormControl>
 														</Controls>
 														<Caption>Setup</Caption>
 													</AxFormControl>

@@ -22,6 +22,7 @@ internal final class ChatGPTAssistantAPIDefaults
         SystemParameters.AssistantGPTAPIBaseURL = "https://api.openai.com/v1/threads";
         SystemParameters.AssistantGPTAPIPrePrompt = "";
         SystemParameters.AssistantGPTAPIProvideContextInfo = NoYes::Yes;
+        SystemParameters.AssistantGPTAPITimeOut = 60;
 
         SystemParameters.update();
 

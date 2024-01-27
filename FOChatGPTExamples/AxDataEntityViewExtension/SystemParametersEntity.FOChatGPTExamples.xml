@@ -8,6 +8,48 @@
 	<Fields>
 		<AxDataEntityViewField xmlns=""
 			i:type="AxDataEntityViewMappedField">
+			<Name>AssistantGPTAPIAssistantId</Name>
+			<DataField>AssistantGPTAPIAssistantId</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>AssistantGPTAPIBaseURL</Name>
+			<DataField>AssistantGPTAPIBaseURL</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>AssistantGPTAPIKey</Name>
+			<DataField>AssistantGPTAPIKey</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>AssistantGPTAPIPrePrompt</Name>
+			<DataField>AssistantGPTAPIPrePrompt</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>AssistantGPTAPIProvideContextInfo</Name>
+			<DataField>AssistantGPTAPIProvideContextInfo</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>AssistantGPTAPITimeOut</Name>
+			<DataField>AssistantGPTAPITimeOut</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>AssistantGPTAPIUseAPI</Name>
+			<DataField>AssistantGPTAPIUseAPI</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
 			<Name>ChatGPTAPIBaseURL</Name>
 			<DataField>ChatGPTAPIBaseURL</DataField>
 			<DataSource>SystemParameters</DataSource>
@@ -22,6 +64,24 @@
 			i:type="AxDataEntityViewMappedField">
 			<Name>ChatGPTAPIModel</Name>
 			<DataField>ChatGPTAPIModel</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>ChatGPTAPIPrePrompt</Name>
+			<DataField>ChatGPTAPIPrePrompt</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>ChatGPTAPIProvideContextInfo</Name>
+			<DataField>ChatGPTAPIProvideContextInfo</DataField>
+			<DataSource>SystemParameters</DataSource>
+		</AxDataEntityViewField>
+		<AxDataEntityViewField xmlns=""
+			i:type="AxDataEntityViewMappedField">
+			<Name>ChatGPTAPIUseAPI</Name>
+			<DataField>ChatGPTAPIUseAPI</DataField>
 			<DataSource>SystemParameters</DataSource>
 		</AxDataEntityViewField>
 	</Fields>

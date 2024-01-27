@@ -6,6 +6,13 @@
 	<FieldModifications />
 	<Fields>
 		<AxTableField xmlns=""
+			i:type="AxTableFieldEnum">
+			<Name>ChatGPTAPIUseAPI</Name>
+			<ExtendedDataType>ChatGPTAPIUseAPI</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<EnumType>NoYes</EnumType>
+		</AxTableField>
+		<AxTableField xmlns=""
 			i:type="AxTableFieldString">
 			<Name>ChatGPTAPIKey</Name>
 			<ExtendedDataType>ChatGPTAPIKey</ExtendedDataType>
@@ -33,6 +40,50 @@
 			i:type="AxTableFieldEnum">
 			<Name>ChatGPTAPIProvideContextInfo</Name>
 			<ExtendedDataType>ChatGPTAPIProvideContextInfo</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldEnum">
+			<Name>AssistantGPTAPIUseAPI</Name>
+			<ExtendedDataType>AssistantGPTAPIUseAPI</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<EnumType>NoYes</EnumType>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldEnum">
+			<Name>AssistantGPTAPIProvideContextInfo</Name>
+			<ExtendedDataType>AssistantGPTAPIProvideContextInfo</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+			<EnumType>NoYes</EnumType>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>AssistantGPTAPIAssistantId</Name>
+			<ExtendedDataType>AssistantGPTAPIAssistantId</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>AssistantGPTAPIBaseURL</Name>
+			<ExtendedDataType>AssistantGPTAPIBaseURL</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>AssistantGPTAPIKey</Name>
+			<ExtendedDataType>AssistantGPTAPIKey</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldString">
+			<Name>AssistantGPTAPIPrePrompt</Name>
+			<ExtendedDataType>AssistantGPTAPIPrePrompt</ExtendedDataType>
+			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
+		</AxTableField>
+		<AxTableField xmlns=""
+			i:type="AxTableFieldInt">
+			<Name>AssistantGPTAPITimeOut</Name>
+			<ExtendedDataType>AssistantGPTAPITimeOut</ExtendedDataType>
 			<IgnoreEDTRelation>Yes</IgnoreEDTRelation>
 		</AxTableField>
 	</Fields>
