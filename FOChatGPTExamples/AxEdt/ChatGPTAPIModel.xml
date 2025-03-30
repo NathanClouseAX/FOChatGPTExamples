@@ -2,9 +2,9 @@
 <AxEdt xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns=""
 	i:type="AxEdtString">
 	<Name>ChatGPTAPIModel</Name>
-	<Extends>AccountName</Extends>
 	<Label>@ElectronicReporting:ModelName</Label>
 	<ArrayElements />
 	<Relations />
 	<TableReferences />
+	<StringSize>600</StringSize>
 </AxEdt>
